@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/account.css" />
+  </head>
+  <body>
+    <section class="navbar">
+      <img
+        src="https://www.vectorlogo.zone/logos/instagram/instagram-wordmark.svg"
+        alt="left-icon"
+        class="left-icon"
+      />
+
+      <div class="buttons">
+        <button class="login">Log in</button>
+        <button class="signup">Sign up</button>
+      </div>
+    </section>
+
+    <section class="account">
+      <div class="account-header">
+        <img
+          src="data:image/png;base64,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"
+          alt="user-icon"
+          class="user-icon"
+        />
+        <div class="user">
+          <p class="username">joinmultiverse</p>
+          <div class="user-buttons">
+            <button class="follow">Follow</button>
+            <button class="message">Message</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="account-details">
+        <p class="account-name">Multiverse</p>
+        <p class="desc">
+          Providing outstanding professional apprenticeships in the UK and US
+        </p>
+        <a href="https://linktr.ee/joinmultiverse" class="linktree"
+          >linktr.ee/joinmultiverse</a
+        >
+      </div>
+
+      <div class="stories">
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+        <div class="story">
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+            alt="story-img"
+            class="story-img"
+          />
+          <p class="story-desc">Story</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="counts">
+        <div class="posts-count">
+          <p class="amount">402</p>
+          <p class="category">posts</p>
+        </div>
+        <div class="followers-count">
+          <p class="amount">17.1K</p>
+          <p class="category">followers</p>
+        </div>
+        <div class="following-count">
+          <p class="amount">615</p>
+          <p class="category">following</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="posts-tab active">
+          <img src="https://www.svgrepo.com/show/522136/grid.svg" alt="" />
+        </div>
+        <div class="reels-tab">
+          <img
+            src="https://www.svgrepo.com/show/522706/video-file.svg"
+            alt=""
+          />
+        </div>
+        <div class="tagged-tab">
+          <img
+            src="https://www.svgrepo.com/show/529285/user-heart.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="posts">
+        <div class="posts-board active">
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+        </div>
+        <div class="reels-board">
+          <video controls="controls">
+            <source
+              src="https://assets.mixkit.co/videos/preview/mixkit-busy-street-in-the-city-4000-large.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <video controls="controls">
+            <source
+              src="https://elements-video-cover-images-0.imgix.net/files/4e665b3d-b1f0-4b26-9c0a-c79da0b21526/inline_image_preview.jpg?auto=compress%2Cformat&fit=min&h=225&w=400&s=8542039a083c24a07cdc06ed1a33a51b"
+              type="video/mp4"
+            />
+          </video>
+          <video controls="controls">
+            <source
+              src="https://assets.mixkit.co/videos/preview/mixkit-busy-street-in-the-city-4000-large.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="tagged-board">
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+          <img
+            src="https://rare-gallery.com/mocahbig/1331859-Hogwarts-CastleHarry-Potter-HD-Wallpaper.jpg"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="../script/account.js"></script>
+  </body>
+</html>

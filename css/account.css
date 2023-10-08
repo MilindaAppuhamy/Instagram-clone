@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  border: 0;
+  max-width: 100vw;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 80px 480px 80px 1fr;
+  grid-template-areas:
+    "navbar"
+    "account"
+    "details"
+    "posts";
+  overflow-x: hidden;
+}
+
+.navbar {
+  grid-area: "navbar";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: calc(100vw - 20px);
+  border-bottom: 0.1px solid rgb(75, 75, 75);
+}
+
+.navbar > img {
+  width: 220px;
+  height: 80px;
+}
+
+.navbar .buttons button {
+  margin-left: 5px;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.navbar .buttons .login {
+  color: white;
+  background-color: rgb(102, 132, 255);
+}
+
+.navbar .buttons .signup {
+  color: rgb(102, 132, 255);
+  background-color: white;
+}
+
+.account {
+  grid-area: "account";
+  margin-top: 20px;
+}
+
+.account .account-header {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.account .account-header > img {
+  width: 140px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.account .account-header .user {
+  padding-bottom: 50px;
+}
+
+.account .account-header .user .username {
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.account .account-header .user-buttons > button {
+  font-size: large;
+  padding: 14px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+}
+
+.account .account-details {
+  padding-left: 30px;
+  padding-bottom: 25px;
+}
+
+.account .account-details > p,
+.account .account-details > a {
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.account .account-details .account-name {
+  font-weight: bold;
+}
+
+.account .account-details > a {
+  text-decoration: none;
+  color: rgb(53, 53, 255);
+}
+
+.stories {
+  max-width: calc(100vw - 30px);
+  padding-left: 30px;
+  overflow-x: scroll;
+  display: flex;
+  padding-bottom: 1400px;
+}
+
+.stories::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.stories .story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.stories .story > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to left,
+    rgb(255, 67, 67),
+    rgb(57, 57, 255),
+    rgb(182, 0, 182),
+    orange
+  );
+  padding: 5px;
+}
+
+.stories .story > p {
+  font-family: sans-serif;
+  font-size: medium;
+  margin-top: 5px;
+}
+
+.details {
+  border-top: 1px solid gray;
+  grid-area: "details";
+}
+
+.details .counts {
+  max-width: 100%;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  margin-top: 10px;
+}
+
+.details .counts .posts-count > p,
+.details .counts .followers-count > p,
+.details .counts .following-count > p {
+  font-size: large;
+  font-family: sans-serif;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.details .counts .posts-count,
+.details .counts .followers-count,
+.details .counts .following-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.details .counts .posts-count .amount,
+.details .counts .followers-count .amount,
+.details .counts .following-count .amount {
+  font-weight: bold;
+}
+
+.details .counts .posts-count .category,
+.details .counts .followers-count .category,
+.details .counts .following-count .category {
+  color: rgb(79, 79, 79);
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  margin-bottom: 2px;
+}
+
+.tabs .posts-tab > img {
+  padding-top: 10px;
+  width: 26px;
+  margin-right: 15px;
+}
+
+.tabs .reels-tab > img,
+.tabs .tagged-tab > img {
+  padding-top: 10px;
+  width: 30px;
+}
+
+.tabs .reels-tab > img {
+  margin-right: 20px;
+}
+
+.tabs .posts-tab,
+.tabs .reels-tab,
+.tabs .tagged-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  padding-bottom: 15px;
+}
+
+.tabs .posts-tab.active,
+.tabs .reels-tab.active,
+.tabs .tagged-tab.active {
+  border-top: 2px solid rgb(110, 110, 255);
+}
+
+.posts {
+  grid-area: "posts";
+  width: 100%;
+}
+
+.posts .posts-board,
+.posts .reels-board,
+.posts .tagged-board {
+  display: none;
+  flex-wrap: wrap;
+}
+
+.posts .posts-board.active,
+.posts .reels-board.active,
+.posts .tagged-board.active {
+  display: flex;
+}
+
+.posts .posts-board > img,
+.posts .reels-board > video,
+.posts .tagged-board > img {
+  width: 300px;
+  margin: 3px;
+  flex-grow: 1;
+}
+
+.buttons .login:hover,
+.buttons .signup:hover,
+.user .follow:hover,
+.user .message:hover,
+.story > img:hover,
+.posts-tab > img:hover,
+.reels-tab > img:hover,
+.tagged-tab > img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
